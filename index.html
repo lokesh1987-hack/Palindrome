@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Find Palindrome</title>
+    <link rel="stylesheet" href="index.css">
+
+    <script>
+        function palindrome() {
+
+            var str = document.getElementById("input").value;
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] == str[str.length - 1 - i])
+                    document.getElementById("answer").innerHTML = "It is palindrome"
+                else 
+                    document.getElementById("answer").innerHTML = "It is not palindrome"
+            }
+        }    
+        </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Find it is Palindrome or Not ?</h1>
+        <div class="box1"></div>
+            <label id="label" >Enter something :</label>
+            <input type="text" id="input" />
+            <button onclick="palindrome()">Cheak</button>
+            <label id="answer"></label>
+        </div>
+       
+    </div>
+</body>
+
+</html>
